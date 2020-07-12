@@ -6,7 +6,7 @@ namespace gtci
     {
         static void Main(string[] args)
         {
-            MinSizeSubArraySum.Run();
+            LongestSubstringKDistinct.Run();
         }
     }
 }
