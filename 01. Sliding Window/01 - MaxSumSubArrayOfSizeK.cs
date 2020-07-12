@@ -27,12 +27,13 @@ namespace gtci
             int windowStart = 0;
             for (int windowEnd = 0; windowEnd < arr.Length; windowEnd++)
             {
-                windowSum += arr[windowEnd];
+                windowSum += arr[windowEnd]; //add the next element to the window
 
+                //we don't slide the window until we've reached the required window size of K
                 if (windowEnd >= K - 1)
                 {
                     maximumSum = Math.Max(maximumSum, windowSum);
-                    //remove first element of window from the window
+                    //remove first (outgoing) element of window from the window
                     windowSum -= arr[windowStart];
                     //slide the window
                     windowStart++;
