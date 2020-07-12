@@ -25,7 +25,7 @@ namespace gtci
             }
             return result;
         }
-        static void Main(string[] args)
+        public static void Run()
         {
             double[] result = AverageOfSubArrayOfSizeK.findAverages(5, new int[] { 1, 3, 2, 6, -1, 4, 1, 8, 2 });
             Console.WriteLine($"Averages of subarrays of size K: { string.Join(',', result) }");
