@@ -13,22 +13,24 @@ Output: [0 1 1 4 9]
 """
 
 def make_squares(arr):
-    squares = [] #or collections.deque()
+    squares = [0 for i in range(len(arr))] #or collections.deque()
     left = 0
     right = len(arr) - 1
+    targetindex = len(arr)-1
+
     while(left <= right):
         if arr[left]**2 > arr[right]**2:
-            squares.insert(0, arr[left]**2) #or squares.appendleft(arr[left]**2)
+            squares[targetindex] = arr[left]**2 #or squares.appendleft(arr[left]**2)
             left += 1
         else:
-            squares.insert(0, arr[right] ** 2)
+            squares[targetindex] = arr[right] ** 2
             right -= 1
-
+        targetindex -= 1
     return squares
 
 
 def main():
-    print list(make_squares([-2, -1, 0, 2, 3]))
-    print list(make_squares([-3, -1, 0, 1, 2]))
+    print make_squares([-2, -1, 0, 2, 3])
+    print make_squares([-3, -1, 0, 1, 2])
 
 main()
