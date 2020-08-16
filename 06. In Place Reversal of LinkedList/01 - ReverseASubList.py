@@ -44,6 +44,7 @@ def reverse_sub_list(head, p, q):
         previous = current
         current = temp
         i += 1
+        
     # at the end of the reversal:
     # - current (the current start of 2nd segment) will the end of the reversed (2nd) segment
     # - previous (former end of the 1st segment) will be the start of the (2nd) segment
